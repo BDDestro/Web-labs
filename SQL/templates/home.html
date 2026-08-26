@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}GMIT - SQL Injection Lab{% endblock %}
+
+{% block content %}
+<div class="lab-card">
+  <div class="lab-badge">GMIT WEB SECURITY LAB</div>
+  <h1>SQL Injection Login Bypass</h1>
+  <p class="subtitle">
+    The login query is intentionally vulnerable to SQL injection.
+    Bypass authentication to capture the flag.
+  </p>
+
+  <div class="hint-box">
+    <strong>💡 Beginner Hint</strong>
+    <p>Try changing the SQL logic in the username field and commenting out the rest of the query.</p>
+  </div>
+
+  <form method="post" autocomplete="off">
+    <label for="username">Username</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      placeholder="Enter username"
+      autocomplete="off"
+      required
+    />
+
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      placeholder="Enter password"
+      autocomplete="off"
+      required
+    />
+
+    <button type="submit">Login</button>
+  </form>
+
+  {% if error %}
+    <div class="error">{{ error }}</div>
+  {% endif %}
+
+  {% if query_preview %}
+    <details class="query-box">
+      <summary>Query preview</summary>
+      <code>{{ query_preview }}</code>
+    </details>
+  {% endif %}
+</div>
+{% endblock %}

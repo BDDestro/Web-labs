@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #030603;
+  color: #ffffff;
+}
+
+#particles-js {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 18px;
+}
+
+.lab-card {
+  width: min(520px, 100%);
+  padding: 34px;
+  border: 1px solid rgba(17, 225, 54, 0.45);
+  border-radius: 14px;
+  background: rgba(0, 10, 2, 0.88);
+  box-shadow: 0 0 35px rgba(17, 225, 54, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.lab-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 9px;
+  border-radius: 4px;
+  color: #0b0b0b;
+  background: #11e136;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-size: 28px;
+}
+
+.subtitle {
+  margin-bottom: 22px;
+  color: #c6d2c8;
+  line-height: 1.55;
+}
+
+.hint-box {
+  margin-bottom: 22px;
+  padding: 14px;
+  border-left: 4px solid #11e136;
+  border-radius: 5px;
+  background: rgba(17, 225, 54, 0.08);
+  color: #d9efdd;
+  line-height: 1.5;
+}
+
+.hint-box p {
+  margin-top: 7px;
+}
+
+form {
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin: 13px 0 7px;
+  color: #e7eee8;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #3a503e;
+  border-radius: 6px;
+  outline: none;
+  background: #071009;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #11e136;
+  box-shadow: 0 0 0 3px rgba(17, 225, 54, 0.1);
+}
+
+button,
+.btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 6px;
+  background: #11e136;
+  color: #031005;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form button {
+  width: 100%;
+}
+
+button:hover,
+.btn:hover {
+  background: #32f052;
+}
+
+.secondary {
+  background: #263229;
+  color: #ffffff;
+}
+
+.secondary:hover {
+  background: #344238;
+}
+
+.error {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid #d04d4d;
+  border-radius: 6px;
+  background: rgba(208, 77, 77, 0.16);
+  color: #ffaaaa;
+  text-align: center;
+}
+
+.query-box {
+  margin-top: 18px;
+  padding: 12px;
+  border: 1px solid #263f2b;
+  border-radius: 6px;
+  background: #030a04;
+}
+
+.query-box summary {
+  cursor: pointer;
+  color: #8ee59c;
+}
+
+.query-box code {
+  display: block;
+  margin-top: 10px;
+  overflow-wrap: anywhere;
+  color: #b9ffc4;
+  font-family: Consolas, monospace;
+  line-height: 1.45;
+}
+
+.success-card {
+  text-align: center;
+}
+
+.solved-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #11e136;
+  color: #021004;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.logged-user {
+  margin-top: 12px;
+  color: #b9c8bc;
+}
+
+.flag-box {
+  margin: 22px 0 5px;
+  padding: 16px;
+  border: 1px solid #11e136;
+  border-radius: 7px;
+  background: rgba(17, 225, 54, 0.08);
+  color: #7cff91;
+  font-family: Consolas, monospace;
+  font-size: 17px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.watermark {
+  position: fixed;
+  right: 12px;
+  bottom: 10px;
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 11px;
+}
+
+@media (max-width: 560px) {
+  .lab-card {
+    padding: 24px 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
